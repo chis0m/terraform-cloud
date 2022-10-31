@@ -1,6 +1,6 @@
 # create instance for jenkins
 resource "aws_instance" "Jenkins" {
-  ami                         = var.ubuntu_ami
+  ami                         = var.jenkins-ami
   instance_type               = "t2.micro"
   subnet_id                   = var.public_subnet_1_id
   vpc_security_group_ids      = [var.compute_sg_id]
@@ -13,7 +13,7 @@ resource "aws_instance" "Jenkins" {
 
 #create instance for sonbarqube
 resource "aws_instance" "sonbarqube" {
-  ami                         = var.ubuntu_ami
+  ami                         = var.sonarqube-ami
   instance_type               = "t2.medium"
   subnet_id                   = var.public_subnet_1_id
   vpc_security_group_ids      = [var.compute_sg_id]
@@ -25,7 +25,7 @@ resource "aws_instance" "sonbarqube" {
 
 # create instance for artifactory
 resource "aws_instance" "artifactory" {
-  ami                         = var.redhat_ami
+  ami                         = var.artifactory-ami
   instance_type               = "t2.medium"
   subnet_id                   = var.public_subnet_1_id
   vpc_security_group_ids      = [var.compute_sg_id]

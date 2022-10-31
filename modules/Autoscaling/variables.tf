@@ -10,11 +10,19 @@ variable "project" {
   type = string
 }
 
-variable "ubuntu-ami" {
+variable "wordpress-app-ami" {
   type = string
 }
 
-variable "redhat-ami" {
+variable "tooling-app-ami" {
+  type = string
+}
+
+variable "bastion-ami" {
+  type = string
+}
+
+variable "proxy-server-ami" {
   type = string
 }
 

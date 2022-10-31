@@ -31,7 +31,7 @@ resource "random_shuffle" "az_list" {
 }
 
 resource "aws_launch_template" "bastion-lt" {
-  image_id               = var.ubuntu-ami
+  image_id               = var.bastion-ami
   instance_type          = "t2.micro"
   vpc_security_group_ids = [var.bastion_sg_id]
 
@@ -88,7 +88,7 @@ resource "aws_autoscaling_group" "bastion-asg" {
 # launch template for nginx
 
 resource "aws_launch_template" "proxy-server-lt" {
-  image_id               = var.redhat-ami
+  image_id               = var.proxy-server-ami
   instance_type          = "t2.micro"
   vpc_security_group_ids = [var.proxy_server_sg_id]
 

@@ -1,7 +1,7 @@
 # launch template for wordpress
 
 resource "aws_launch_template" "wordpress-app-lt" {
-  image_id               = var.redhat-ami
+  image_id               = var.wordpress-app-ami
   instance_type          = "t2.micro"
   vpc_security_group_ids = [var.web_server_sg_id]
 
@@ -62,7 +62,7 @@ resource "aws_autoscaling_attachment" "asg_attachment_wordpress" {
 
 # launch template for tooling
 resource "aws_launch_template" "tooling-app-lt" {
-  image_id               = var.redhat-ami
+  image_id               = var.tooling-app-ami
   instance_type          = "t2.micro"
   vpc_security_group_ids = [var.web_server_sg_id]
 

@@ -18,11 +18,15 @@ variable "compute_sg_id" {
   type = string
 }
 
-variable "redhat_ami" {
+variable "jenkins-ami" {
   type = string
 }
 
-variable "ubuntu_ami" {
+variable "sonarqube-ami" {
+  type = string
+}
+
+variable "artifactory-ami" {
   type = string
 }
 
