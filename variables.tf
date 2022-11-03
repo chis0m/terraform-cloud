@@ -20,15 +20,28 @@ variable "preferred_number_of_subnets" {
   type        = number
   description = "Number of private subnets"
 }
-variable "ubuntu-ami" {
+
+variable "web-ami" {
   type        = string
-  description = "AMI ID for the launch template"
+  description = "AMI ID for the web servers"
 
 }
 
-variable "redhat-ami" {
+variable "ubuntu-ami" {
   type        = string
-  description = "AMI ID for the launch template"
+  description = "AMI ID for ubuntu servers"
+
+}
+
+variable "bastion-ami" {
+  type        = string
+  description = "AMI ID for bastion hosts"
+
+}
+
+variable "proxy-server-ami" {
+  type        = string
+  description = "AMI ID for proxy server with nginx"
 
 }
 

@@ -64,10 +64,10 @@ module "Autoscaling" {
   tags                             = local.tags
   workspace                        = local.workspace
   project                          = local.project
-  bastion-ami                      = var.ubuntu-ami
-  proxy-server-ami                 = var.ubuntu-ami
-  wordpress-app-ami                = var.redhat-ami
-  tooling-app-ami                  = var.redhat-ami
+  bastion-ami                      = var.bastion-ami
+  proxy-server-ami                 = var.proxy-server-ami
+  wordpress-app-ami                = var.web-ami
+  tooling-app-ami                  = var.web-ami
   bastion_sg_id                    = module.SecurityGroups.bastion_sg_id
   proxy_server_sg_id               = module.SecurityGroups.proxy_server_sg_id
   web_server_sg_id                 = module.SecurityGroups.web_server_sg_id
@@ -117,9 +117,9 @@ module "Compute" {
   workspace          = local.workspace
   project            = local.project
   keypair            = var.keypair
-  sonarqube-ami      = var.redhat-ami
-  artifactory-ami    = var.redhat-ami
-  jenkins-ami        = var.ubuntu-ami
+  sonarqube-ami      = var.ubuntu-ami
+  artifactory-ami    = var.bastion-ami
+  jenkins-ami        = var.bastion-ami
   public_subnet_1_id = module.VPC.public_subnet_1_id
   compute_sg_id      = module.SecurityGroups.external_alb_sg_id
 }
