@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f750a63a-d72e-4e2d-8837-e6a964c1af0e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00-main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/00-main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/terraform.auto.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/terraform.auto.tfvars" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/ALB/03.alb-internal.tf" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ALB/03.alb-internal.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +51,8 @@
       <workItem from="1667137670122" duration="4110000" />
       <workItem from="1667154829128" duration="1510000" />
       <workItem from="1667174927686" duration="348000" />
-      <workItem from="1667175461111" duration="4736000" />
+      <workItem from="1667175461111" duration="7453000" />
+      <workItem from="1667618407048" duration="306000" />
     </task>
     <servers />
   </component>

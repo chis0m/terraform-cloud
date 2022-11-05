@@ -144,7 +144,7 @@ resource "aws_autoscaling_group" "proxy-server-asg" {
 }
 
 # attaching autoscaling group of proxy server to external load balancer
-resource "aws_autoscaling_attachment" "asg-attachment-proxy-server" {
-  autoscaling_group_name = aws_autoscaling_group.proxy-server-asg.id
-  lb_target_group_arn    = var.proxy_server_tg_arn
-}
+//resource "aws_autoscaling_attachment" "asg-attachment-proxy-server" {
+//  autoscaling_group_name = aws_autoscaling_group.proxy-server-asg.id
+//  lb_target_group_arn    = var.proxy_server_tg_arn
+//}
