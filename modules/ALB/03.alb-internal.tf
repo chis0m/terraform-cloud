@@ -63,32 +63,32 @@ resource "aws_lb_target_group" "tooling-tg" {
 # For this aspect a single listener was created for the wordpress which is default,
 # A rule was created to route traffic to tooling when the host header changes
 
-//resource "aws_lb_listener" "web-listener" {
-//  load_balancer_arn = aws_lb.internal-alb.arn
-//  port              = 443
-//  protocol          = "HTTPS"
-//  certificate_arn   = aws_acm_certificate_validation.chisomejim.certificate_arn
-//
-//  default_action {
-//    type             = "forward"
-//    target_group_arn = aws_lb_target_group.wordpress-tg.arn
-//  }
-//}
+resource "aws_lb_listener" "web-listener" {
+  load_balancer_arn = aws_lb.internal-alb.arn
+  port              = 443
+  protocol          = "HTTPS"
+  certificate_arn   = aws_acm_certificate_validation.chisomejim.certificate_arn
+
+  default_action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.wordpress-tg.arn
+  }
+}
 
 # listener rule for tooling target
 
-//resource "aws_lb_listener_rule" "tooling-listener" {
-//  listener_arn = aws_lb_listener.web-listener.arn
-//  priority     = 99
-//
-//  action {
-//    type             = "forward"
-//    target_group_arn = aws_lb_target_group.tooling-tg.arn
-//  }
-//
-//  condition {
-//    host_header {
-//      values = ["tooling.chisomejim.click"]
-//    }
-//  }
-//}
+resource "aws_lb_listener_rule" "tooling-listener" {
+  listener_arn = aws_lb_listener.web-listener.arn
+  priority     = 99
+
+  action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.tooling-tg.arn
+  }
+
+  condition {
+    host_header {
+      values = ["tooling.chisomejim.click"]
+    }
+  }
+}

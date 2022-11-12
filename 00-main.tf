@@ -121,5 +121,5 @@ module "Compute" {
   artifactory-ami    = var.bastion-ami
   jenkins-ami        = var.bastion-ami
   public_subnet_1_id = module.VPC.public_subnet_1_id
-  compute_sg_id      = module.SecurityGroups.external_alb_sg_id
+  compute_sg_id      = module.SecurityGroups.proxy_server_sg_id
 }

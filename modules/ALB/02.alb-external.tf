@@ -36,17 +36,17 @@ resource "aws_lb_target_group" "proxy-server-tg" {
 }
 
 # Creates ALB Listener to point to the proxy server target group
-//resource "aws_lb_listener" "proxy-server-listener" {
-//  load_balancer_arn = aws_lb.ext-alb.arn
-//  port              = 443
-//  protocol          = "HTTPS"
-//  certificate_arn   = aws_acm_certificate_validation.chisomejim.certificate_arn
-//
-//  default_action {
-//    type             = "forward"
-//    target_group_arn = aws_lb_target_group.proxy-server-tg.arn
-//  }
-//}
+resource "aws_lb_listener" "proxy-server-listener" {
+  load_balancer_arn = aws_lb.ext-alb.arn
+  port              = 443
+  protocol          = "HTTPS"
+  certificate_arn   = aws_acm_certificate_validation.chisomejim.certificate_arn
+
+  default_action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.proxy-server-tg.arn
+  }
+}
 
 ####********************************************************#####
 

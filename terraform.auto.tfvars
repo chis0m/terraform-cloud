@@ -8,13 +8,13 @@ enable_dns_hostnames = "true"
 
 preferred_number_of_subnets = 2
 
-web-ami = "ami-049d928bf1ecbf5c6"
+web-ami = "ami-0733747af60910aa8"
 
-ubuntu-ami = "ami-029c33b1389d69a4d"
+ubuntu-ami = "ami-0e8303dbf8c8159d4"
 
-proxy-server-ami = "ami-0231a079cc867266c"
+proxy-server-ami = "ami-0da2ca1901fb4c47d"
 
-bastion-ami = "ami-021c481429d8da052"
+bastion-ami = "ami-05b2af2ca768e725b"
 
 keypair = "masterclass"
 
